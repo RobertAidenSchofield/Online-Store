@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "postintall": "npx prisma generate",
-    "vercel-build": "next build" },
+    "vercel-build": " npx prisma generate && next build" },
   "dependencies": {
     "@neondatabase/serverless": "^0.10.4",
     "@prisma/adapter-neon": "^6.1.0",
