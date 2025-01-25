@@ -6,3 +6,8 @@ export const SERVER_URL =
   process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3000';
 export const LATEST_PRODS_LIMIT = Number(process.env.LATEST_PRODS_LIMIT) || 4;
 
+export const signInDefaultValues = {
+  email: '',
+  password: '',
+};
+
