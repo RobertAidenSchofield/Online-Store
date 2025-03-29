@@ -1,4 +1,4 @@
-import { EllipsisVertical, ShoppingCart, User, UserIcon } from 'lucide-react';
+import { EllipsisVertical, ShoppingCart } from 'lucide-react';
 import { Button } from '../../ui/button';
 import { Sheet } from '../../ui/sheet';
 import ModeToggle from './mode-toggle';
