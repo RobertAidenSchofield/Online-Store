@@ -33,6 +33,7 @@ export const config = {
             email: credentials.email as string,
           },
         });
+
         if (user && user.password) {
           const isValid = compareSync(
             credentials.password as string,
@@ -46,10 +47,9 @@ export const config = {
               role: user.role,
             };
           }
-          // Explicit return for failed password validation
+          //if use doesnt exist or password is not valid return null
           return null;
         }
-
         return null;
       },
     }),
