@@ -1,4 +1,4 @@
-import { EllipsisVertical, ShoppingCart, UserIcon } from 'lucide-react';
+import { EllipsisVertical, ShoppingCart, User, UserIcon } from 'lucide-react';
 import { Button } from '../../ui/button';
 import { Sheet } from '../../ui/sheet';
 import ModeToggle from './mode-toggle';
@@ -9,6 +9,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '../../ui/sheet';
+import UserButton from './user-button';
 
 const Menu = () => {
   return (
@@ -20,11 +21,7 @@ const Menu = () => {
             <ShoppingCart /> Cart
           </Link>
         </Button>
-        <Button asChild>
-          <Link href=' /sign-in'>
-            <UserIcon /> Sign In
-          </Link>
-        </Button>
+        <UserButton />
       </nav>
       <nav className=' md:hidden'>
         <Sheet>
@@ -39,11 +36,7 @@ const Menu = () => {
                 <ShoppingCart /> Cart
               </Link>
             </Button>
-            <Button asChild>
-              <Link href=' /sign-in'>
-                <UserIcon /> Sign In
-              </Link>
-            </Button>
+            <UserButton />
             <SheetDescription></SheetDescription>
           </SheetContent>
         </Sheet>
