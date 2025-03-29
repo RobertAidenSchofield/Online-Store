@@ -26,6 +26,7 @@ export const config = {
       },
       async authorize(credentials) {
         if (credentials == null) return null;
+
         // find user in database
         const user = await prisma.user.findFirst({
           where: {
@@ -45,13 +46,16 @@ export const config = {
               role: user.role,
             };
           }
-        } else {
+          // Explicit return for failed password validation
           return null;
         }
+
+        return null;
       },
     }),
   ],
   callbacks: {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     async session({ session, user, trigger, token }: any) {
       session.user.id = token.sub;
       if (trigger === 'update') {
